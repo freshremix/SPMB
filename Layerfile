@@ -21,8 +21,8 @@ RUN make -j 6
 RUN sudo make altinstall
 RUN python3.11 -m pip install --upgrade pip
 WORKDIR /root/SP
-RUN git clone https://github.com/freshremix/SPDB.git
-WORKDIR /root/SP/SPDB
+RUN git clone https://github.com/freshremix/ispdb.git
+WORKDIR /root/SP/ispdb
 RUN pip3.11 install -r requirements.txt
 RUN ls
 RUN BACKGROUND python3.11 main.py && \
